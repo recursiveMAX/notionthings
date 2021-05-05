@@ -1,0 +1,287 @@
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Source+Sans+Pro" rel="stylesheet"><style>
+
+.stardust {
+ position: relative;
+ margin: 20px auto 0px;
+ height: 500px;
+ width: 530px;
+ overflow: hidden;
+ border-right: 1px solid #262626;
+ border-left: 1px solid #262626;
+}
+
+.starmainin {
+ height: 500px;
+ width: 500px;
+ left: 15px;
+ background: #262626;
+ position: absolute;
+}
+
+
+.stardust img {
+ width: 500px;
+ height: 230px;
+ position: absolute;
+ object-fit: cover;
+ bottom: 30px;
+ outline: 1px solid rgba(247,247,247,0.3);
+ outline-offset: 15px;
+ filter: grayscale(50%);
+ -webkit-filter: grayscale(50%);
+ z-index: 1;
+ left: 15px;
+}
+
+
+.staricon {
+ height: 40px;
+ width: 40px;
+ background-size: cover;
+ position: absolute;
+ filter: grayscale(50%);
+ -webkit-filter: grayscale(50%);
+ outline: 1px solid rgba(247,247,247,0.3);
+ outline-offset: 5px;
+ right: 60px;
+ top: 35px;
+}
+
+.outlinetwist {
+ outline: 1px solid #e8f1f3;
+ outline-offset: 5px;
+ position: absolute;
+ background: transparent;
+ transform: rotate(45deg);
+ -webkit-transform: rotate(45deg);
+ top: 35px;
+ right: 60px;
+ height: 40px;
+ width: 40px;
+}
+
+.outlinetwist2 {
+ outline: 1px solid #e4e0cb;
+ outline-offset: 5px;
+ position: absolute;
+ background: transparent;
+ transform: rotate(25deg);
+ -webkit-transform: rotate(25deg);
+ top: 35px;
+ right: 60px;
+ height: 40px;
+ width: 40px;
+}
+
+.stardust input {
+ display: none
+}
+
+.stardust label {
+ width: 60px;
+ background: rgba(247,247,247,0.5);
+ display: block;
+ position: relative;
+ left: 417px;
+ outline: 1px solid rgba(247,247,247,0.2);
+ outline-offset: 3px;
+ text-align: center;
+ padding: 3px;
+ line-height: 100%;
+ font-family: libre baskerville;
+ text-transform: lowercase;
+ color: #262626;
+ top: 90px;
+ margin: 14px 0px;
+ font-size: 8px;
+ letter-spacing: 2px;
+ font-style: italic;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+#ongoing:checked+label, #complete:checked+label, #dead:checked+label, #ideas:checked+label {
+background: #e8f1f3;
+}
+
+.starinone, .starintwo, .starinthree, .starinfour {
+ position: absolute;
+ height: 135px;
+ padding-bottom: 5px;
+ width: 310px;
+ background: #e8f1f3;
+ top: 35px;
+ border: 10px solid #e8f1f3;
+ left: -400px;
+ outline: 1px solid rgba(247,247,247,0.2);
+ outline-offset: 10px;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -ms-columns: 2;
+  -o-columns: 2;
+   -webkit-column-gap: 20px;
+   -moz-column-gap: 20px;
+   -ms-column-gap: 20px;
+   -o-column-gap: 20px;
+   -webkit-column-rule:1px solid rgba(0,0,0,0.1);
+   -moz-column-rule: 1px solid rgba(0,0,0,0.1);
+   -ms-column-rule: 1px solid rgba(0,0,0,0.1);
+   -o-column-rule: 1px solid rgba(0,0,0,0.1);
+   overflow: auto;
+   font-size: 11px;
+   text-align: justify;
+   color: #262626;
+   line-height: 150%;
+   font-family: source sans pro;
+   z-index: 0;
+   transition: 1s;
+}
+
+#ongoing:checked ~ .starinone, #complete:checked ~ .starintwo, #dead:checked ~ .starinthree, #ideas:checked ~ .starinfour {
+ z-index: 1;
+ left: 50px;
+}
+
+.stardust h1 {
+ font-size: 13px;
+ font-style: italic;
+ color: #262626;
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ letter-spacing: 2px;
+ font-family: libre baskerville;
+}
+
+.starinone::-webkit-scrollbar{height:1px}
+.starinone::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinone::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starintwo::-webkit-scrollbar{height:1px}
+.starintwo::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starintwo::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starinthree::-webkit-scrollbar{height:1px}
+.starinthree::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinthree::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starinfour::-webkit-scrollbar{height:1px}
+.starinfour::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinfour::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+
+
+.starcharaname {
+ position: absolute;
+ color: #f7f7f7;
+ font-family: libre baskerville;
+ font-style: italic;
+ font-size: 15px;
+ bottom: 7px;
+ left: 25px;
+ line-height: 100%;
+ z-index: 2;
+ letter-spacing: 3px;
+text-transform: lowercase;
+}
+
+.stardeets {
+ font-size: 10px;
+ top: -1px;
+ position: relative;
+ color: #ddd;
+ opacity: 0;
+ transition: 0.5s;
+background: #262626;
+}
+
+.stardust:hover .stardeets {
+ opacity: 1;
+}
+
+
+</style>
+<div class="stardust">
+<div class="staroverlay"></div>
+ <img src="https://img.nickpic.host/FK2U3s.jpg">
+
+ <div class="starcharaname">CHO KYUNGMI<span class="stardeets">(39 (AUG 19) - GAYY - HEAD EDITOR + JOURNALIST)</span></div>
+
+<div class="starmainin"></div>
+<div class="outlinetwist"></div>
+<div class="outlinetwist2"></div>
+
+ <div class="staricon" style="background-image: url(https://img.nickpic.host/FKrPJp.jpg)"></div>
+
+ <input type="radio" id="ongoing" name="stardust" checked>
+<label for="ongoing">overview</label>
+<input type="radio" id="complete" name="stardust">
+<label for="complete" class="slab2">friends</label>
+<input type="radio" id="dead" name="stardust">
+<label for="dead">enemies</label>
+<input type="radio" id="ideas" name="stardust">
+<label for="ideas">lovers</label>
+
+ <div class="starinone">
+<h1>CV</h1>
+<P><b>EDUCATION</b>
+<br><ul><li>Bachelor of the Arts, Korean Literature and English, Seoul National University, Class of 2002</li>
+<br><li>Master of Journalism, UC Berkeley Graduate School of Journalism, Class of 2006</li></ul>
+
+<b>PROFESSIONAL EXPERIENCE</b>
+<br><i>GQ - Entertainment Writer - 2006-2010</i>
+<br>Selected works:
+<ul><li><i>"The Men Behind the Divas - An Examination of the Men Behind the Most Famous Women in Hollywood",</i> published in the June 2007 issue of GQ</li>
+<li><i>"stuck inside her head - Biopic on singer-songwriter Amanda Lee Harris</i>, including controversial quotes from her rehab and jail experience, published in the February 2008 issue of GQ</li>
+<li><i>"The Queen, The Diva, The Rise and Rise of Drag Queen Lu-Pa"</i>, published in the August 2008 issue of GQ</li>
+<li><i>"The Combustion of Hollywood's Most Expensive Movie in 2009"</i>, published in the October 2009 issue of GQ. Awarded the <i>Stephanie E. Davidson Award in Entertainment Journalism, 2009</i></li></ul>
+
+<br><i>Vogue - Longform Writer - 2010-2014</i>
+<br>Selected works:
+<ul><li><i>"Re-imagining Bodies and Sizes with Designer Eric Blanc"</i>, published in the September 2010 issue of Vogue</li>
+<li><i>"'Hollywood Didn't Want Me, But I Didn't Care', Marie Lisa Archambault talks race, prejudice, and fighting her way to the top"</i>, published in the July 2011 issue of Vogue. <i>Awarded the Excellence in Journalism Award from the United States Union of Journalists, 2011.</i></li>
+<li><i>"A New Dawn After a Dark Night - A Conversation with Model Emilie Sarsberg"</i>, published in the December 2013 issue of Vogue. <i>Cover story for December 2013</i></li>
+</ul>
+
+<br><i>Vogue Korea - Head Editor & Writer - 2014 - Present</i>
+<br>Selected works:
+<ul><li><i>"The Tower to the Top of the World - Biopic on Korea's #1 Band in 2015"</i>, published in the November 2015 issue of Vogue Korea</li>
+<li><i>"Freedom is the Most Delicious Dish - A Conversation with Moon Bina</i>, published in the June 2017 issue of Vogue Korea. <i>Cover story for June 2017.</i></li>
+</ul>
+
+<h1>vogue</h1>
+<i>"Introducing Vogue Korea's New Head Editor, Miss Cho Kyungmi"</i>
+<br>Published in the February 2014 issue of Vogue KR
+<p><b>Cho:</b> It's a bit odd, I must admit. Being on this side of the process.</p>
+<p><b>Interviewer:</b> Ahh, yes I can imagine. Your track record in the entertainment world is quite astounding. I'd love to know why you decided to accept this position as head editor of Vogue Korea, could you tell us?</p>
+<p><b>Cho:</b> It would be my pleasure. As you likely know, I have been working at Vogue US for the past four years. Vogue is a fantastic company and I loved every minute that I worked at the US headquarters. I've won many awards and commendations for my longform journalism, something that Vogue is quite proud of too. An editor position opened up in the US last year, one that I applied for. I was not given that position, as  you can probably assume. I wouldn't be here had I gotten that promotion. My editor pulled me aside one day, and told me that the main reason I did not receive the editor position, was that Vogue International had different ideas for my next promotion. She told me that the head editor position, your position, I guess! *laughs* She told me that the position would be open in Korea, and that Vogue International wanted me to head the division. The position was open for all to apply, of course, but that my name was already being floated for the position. I will be honest - I had to think about what I wanted for a very long time. Working for the US version of Vogue, I've been sent around the world to cover major fashion events. We, Vogue, have a great power and responsibility in the fashion world. A coworker even suggested that I don't apply, she said it would be a step down for me professionally.</p>
+<p><b>Interviewer:</b> A step down, really? That's...</p>
+<p><b>Cho:</b> Racist? I sure thought so. Actually, that coworker might be the biggest reason why I did apply for this position. It's not a step down at all, and anyone who thinks that is a fool. Korea is emerging as the leader in fashion, design, and music. We are on track to take over the world. I'm ready to lead Vogue Korea into the next decade, with elegance and style.</p>
+<p><b>Interviewer:</b> How long has it been since you've been back here?</p>
+<p><b>Cho:</b> It's been almost ten years now. Just a few months, and it would have been ten. My graduate program was in California, and I lived there for the most part while I was working with GQ. Once I came to Vogue, I moved to New York City, where I had lived for four years. It's a lovely city, but not as lovely as Seoul. I grew up here, I know these streets quite well, though things have changed considerably since I moved away. It's wonderful being home.</p>
+<p><b>Interviewer:</b> Anything that you are anxious about, being back here as head editor?</p>
+<p><b>Cho:</b> I'm nervous about not having my connections. I had amassed quite a lot of fans and insiders in the US and abroad, but I don't have the same connections here. Also - I hope I can take over your job well, and make you proud. *laughs*
+<p><b>Interviewer:</b> I'm sure you'll do great! I've been a huge fan of your biopics for some time. Being an editor is time-consuming, and most of us don't have the chance to do interviews or write as much as we'd like. Actually, I'm stepping down so that I can do some more writing.</p>
+<p><b>Cho:</b> That is a concern of mine as well. I expect I will be quite busy, but writing long exposes is my passion. I will make time for it, I can promise you that. I hope to cover some of our biggest rising stars, and rewrite my articles for the international markets as well. I have received quite a bit of support after coming home. I know that there is a market for my biopics here, and people are eager to have me ask the questions people don't like to ask.</p>
+<p><b>Interviewer:</b> You're well-known abroad for digging deep and asking some of the most unpleasant questions.</p>
+<p><b>Cho:</b> Yes, it's a big source of pride for me. Entertainment and fashion journalism has been looked down upon for most of my life. But I have the pedigree to ask the hard questions. I've never been afraid of making big media enemies. Rox Studios in the US particularly hates me after my expose on their movie <i>Stargazer</i> in 2009. Whenever I had to ask them for interviews, I made my assistant ask them, because they don't know her name.</p>
+<p><b>Interviewer:</b> I hope you can manage not to make too many enemies here.</p>
+<p><b>Cho:</b> I have to disagree. I hope to make many enemies. My best stories, the stories people want to read, come when I put a big target on my back. I'm not afraid of that.</p>
+<p><b>Interviewer:</b> Well then, I can't until you make your first enemy. We are so happy to have you on our team, and I feel confident I can focus on my writing with you at the helm.</p>
+<p><b>Cho:</b> Thank you. I feel so privileged to be in this position, and I hope that we can do some groundbreaking, world-changing journalism together.</p>
+<p><i>Cho Kyungmi will become head editor for Vogue Korea starting with the March 2014 issue.</i></p>
+
+
+
+ </div>
+ 
+   <div class="starintwo">
+ <h1>friends</h1>
+Friends don't come easily to Kyungmi. She spends so much time in her professional life trying to be charming, approachable, and easy to talk to. And she's mastered this skill professionally - it's how she's able to have natural conversations with her topics. She tends to forget that her <i>topics</i> are people, though. One might think that her approachable demeanor continues after she clocks off of work. It rarely does. Kyungmi does have a few friends though. Once in a while, one of her topics becomes a real person that she gets drinks with. But even with her friends, she still asks quite personal and intrusive questions, and doesn't necessarily answer them back. But if she ever does? If she decides <i>you</i> are one of the few people that she can trust? You're very lucky, you're in a special class of human beings. And Kyungmi is the kind of person who is more than happy to let you cry on her shoulder and vent. She loves that, loves listening to people, and for a good friend, she'll even do it off the record. 
+ </div>
+ 
+   <div class="starinthree">
+ <h1>enemies</h1>
+Enemies are snacks to Kyungmi. She has a lot of them, in Korea and abroad. She cares about <i>people</i> and hearing their stories. She does not care about business executives (except the execs at Vogue). She's good friends with Vogue's legal team, and she calls on them frequently to help her help her contacts wiggle around their contracts so she can talk to them. She has no fears of being sued by high-powered male executives. In fact, she <i>invites</i> them to sue her. Kyungmi loves a good challenge. She's also incredibly arrogant, and snubs her nose at "low-class rag writers", or journalists that write on gossip at smaller companies. The best is all Kyungmi wants, and she doesn't have time for lesser people. 
+
+ </div>
+ 
+   <div class="starinfour">
+ <h1>lovers</h1>
+Kyungmi doesn't have time for romance. She's in a long-term relationship with her career. She gets her <i>needs</i> met when she feels an urge, but a relationship with a real person? She's never found one. Sometimes, she thinks she'd like a girlfriend - wife, really. But, with all things, Kyungmi wants nothing but the best. Her standards for a wife are just as high - she wants a strong, professional woman, an equal. Someone who understands her commitment to her job and wants to be an ally, but understands that the first and most important thing to Kyungmi is producing high-quality journalism. She has yet to find a woman that is her equal, but she hopes, when she's feeling especially lonely in her big bed at night, that she's out there just <i>waiting</i> for Kyungmi to introduce herself. 
+ </div>
+</div><center><a href="http://cttw.jcink.net/index.php?showuser=18033" style="color:#ccc;font-size:7px;letter-spacing:5px;">MONTY</a></center>
