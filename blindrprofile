@@ -1,0 +1,266 @@
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Source+Sans+Pro" rel="stylesheet"><style>
+
+.stardust {
+ position: relative;
+ margin: 20px auto 0px;
+ height: 500px;
+ width: 530px;
+ overflow: hidden;
+ border-right: 1px solid #262626;
+ border-left: 1px solid #262626;
+}
+
+.starmainin {
+ height: 500px;
+ width: 500px;
+ left: 15px;
+ background: #262626;
+ position: absolute;
+}
+
+
+.stardust img {
+ width: 500px;
+ height: 230px;
+ position: absolute;
+ object-fit: cover;
+ bottom: 30px;
+ outline: 1px solid rgba(247,247,247,0.3);
+ outline-offset: 15px;
+ filter: grayscale(50%);
+ -webkit-filter: grayscale(50%);
+ z-index: 1;
+ left: 15px;
+}
+
+
+.staricon {
+ height: 40px;
+ width: 40px;
+ background-size: cover;
+ position: absolute;
+ filter: grayscale(50%);
+ -webkit-filter: grayscale(50%);
+ outline: 1px solid rgba(247,247,247,0.3);
+ outline-offset: 5px;
+ right: 60px;
+ top: 35px;
+}
+
+.outlinetwist {
+ outline: 1px solid #e8f1f3;
+ outline-offset: 5px;
+ position: absolute;
+ background: transparent;
+ transform: rotate(45deg);
+ -webkit-transform: rotate(45deg);
+ top: 35px;
+ right: 60px;
+ height: 40px;
+ width: 40px;
+}
+
+.outlinetwist2 {
+ outline: 1px solid #e4e0cb;
+ outline-offset: 5px;
+ position: absolute;
+ background: transparent;
+ transform: rotate(25deg);
+ -webkit-transform: rotate(25deg);
+ top: 35px;
+ right: 60px;
+ height: 40px;
+ width: 40px;
+}
+
+.stardust input {
+ display: none
+}
+
+.stardust label {
+ width: 60px;
+ background: rgba(247,247,247,0.5);
+ display: block;
+ position: relative;
+ left: 417px;
+ outline: 1px solid rgba(247,247,247,0.2);
+ outline-offset: 3px;
+ text-align: center;
+ padding: 3px;
+ line-height: 100%;
+ font-family: libre baskerville;
+ text-transform: lowercase;
+ color: #262626;
+ top: 90px;
+ margin: 14px 0px;
+ font-size: 8px;
+ letter-spacing: 2px;
+ font-style: italic;
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+#ongoing:checked+label, #complete:checked+label, #dead:checked+label, #ideas:checked+label {
+background: #e8f1f3;
+}
+
+.starinone, .starintwo, .starinthree, .starinfour {
+ position: absolute;
+ height: 135px;
+ padding-bottom: 5px;
+ width: 310px;
+ background: #e8f1f3;
+ top: 35px;
+ border: 10px solid #e8f1f3;
+ left: -400px;
+ outline: 1px solid rgba(247,247,247,0.2);
+ outline-offset: 10px;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -ms-columns: 2;
+  -o-columns: 2;
+   -webkit-column-gap: 20px;
+   -moz-column-gap: 20px;
+   -ms-column-gap: 20px;
+   -o-column-gap: 20px;
+   -webkit-column-rule:1px solid rgba(0,0,0,0.1);
+   -moz-column-rule: 1px solid rgba(0,0,0,0.1);
+   -ms-column-rule: 1px solid rgba(0,0,0,0.1);
+   -o-column-rule: 1px solid rgba(0,0,0,0.1);
+   overflow: auto;
+   font-size: 11px;
+   text-align: justify;
+   color: #262626;
+   line-height: 150%;
+   font-family: source sans pro;
+   z-index: 0;
+   transition: 1s;
+}
+
+#ongoing:checked ~ .starinone, #complete:checked ~ .starintwo, #dead:checked ~ .starinthree, #ideas:checked ~ .starinfour {
+ z-index: 1;
+ left: 50px;
+}
+
+.stardust h1 {
+ font-size: 13px;
+ font-style: italic;
+ color: #262626;
+ border-bottom: 1px solid rgba(0,0,0,0.1);
+ letter-spacing: 2px;
+ font-family: libre baskerville;
+}
+
+.starinone::-webkit-scrollbar{height:1px}
+.starinone::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinone::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starintwo::-webkit-scrollbar{height:1px}
+.starintwo::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starintwo::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starinthree::-webkit-scrollbar{height:1px}
+.starinthree::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinthree::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+.starinfour::-webkit-scrollbar{height:1px}
+.starinfour::-webkit-scrollbar-track{background:transparent!important;border:none!important}
+.starinfour::-webkit-scrollbar-thumb{background: rgba(0,0,0,0.3)}
+
+
+.starcharaname {
+ position: absolute;
+ color: #f7f7f7;
+ font-family: libre baskerville;
+ font-style: italic;
+ font-size: 15px;
+ bottom: 7px;
+ left: 25px;
+ line-height: 100%;
+ z-index: 2;
+ letter-spacing: 3px;
+text-transform: lowercase;
+}
+
+.stardeets {
+ font-size: 10px;
+ top: -1px;
+ position: relative;
+ color: #ddd;
+ opacity: 0;
+ transition: 0.5s;
+background: #262626;
+}
+
+.stardust:hover .stardeets {
+ opacity: 1;
+}
+
+
+</style>
+<div class="stardust">
+<div class="staroverlay"></div>
+ <img src="https://imgur.com/ZdqXI5i.jpg">
+
+ <div class="starcharaname">LI DEMING<span class="stardeets">(33 (JAN 7) - GAYY - SOUND EDITOR)</span></div>
+
+<div class="starmainin"></div>
+<div class="outlinetwist"></div>
+<div class="outlinetwist2"></div>
+
+ <div class="staricon" style="background-image: url(https://i.imgur.com/qIU8yLL.jpg)"></div>
+
+ <input type="radio" id="ongoing" name="stardust" checked>
+<label for="ongoing">overview</label>
+<input type="radio" id="complete" name="stardust">
+<label for="complete" class="slab2">friends</label>
+<input type="radio" id="dead" name="stardust">
+<label for="dead">enemies</label>
+<input type="radio" id="ideas" name="stardust">
+<label for="ideas">lovers</label>
+
+ <div class="starinone">
+<h1>tl;dr</h1>
+Li Deming is a shy, quiet guy who values his privacy. He's also an unabashed slut, a guy who likes to edit weird songs into even weirder songs, and the son of a couple of pro-capitalist expats. He's fluent in Mandarin and Korean, but would rather not speak either unless you ask him about nerdy sound facts, in which case he would <i>love</i> to tell you all about the best ways to mix music and get the best sound quality. 
+
+<h1>01.</h1>
+<P>
+One might think, being the son of two business-oriented parents, Li Deming would go into the family trade too. International business, it's the thing both of his parents breathe. His mother, an international tax accountant, is well-known in her field for being a specialist for businesses trying to break into foreign markets, and his father, a lawyer, is similarly an expert in his specific niche field of international business contracts and negotiations. And yet, somehow, these two very business-minded parents produced a son who couldn't care less about business. </p>
+
+<p>Li Deming <i>gets</i> capitalism. He understands it on an intellectual level, but he doesn't believe in it, and he doesn't like it. He's read the books - both of his parents worked so hard to indoctrinate him into the merits of a free market, the importance of business, and how international business is going to <i>change the world</i>. He understands this, conceptually, he just really doesn't care. 
+</p>
+
+<p>When Li Deming was a youth, his mother tried to teach him principles of accounting, his father, the merits of contracts. But Deming found his way over to an old piano collecting dust (a parting gift from his late grandmother on his father's s side, who he never met), and started poking around on it. He would wake up before either of his parents, crawl up onto that tall piano bench, and bang out tuneless melodies. Piano came naturally to him, much easier than contracts and math. When he sat at his piano, or laid in bed with his ipod and headphones on, he was able to send himself to a different world, where people didn't try to make him have tedious conversations, where he didn't have to hide his desires and dreams. Music made for him a soft, special place, where only he lived.</p>
+
+<h1>02.</h1>
+<p>In high school, a group of his friends decided to make a band. The music, that they chose to call "neo-ska" was about as far away from his preferred tastes as you could find. But, Li Deming, being a good friend (and a pushover), was convinced to do their sound editing. Even if the music they made sounded like, in his humble opinion, a cat using a chalkboard as a scratcher, he figured the least he could do was make their recording sound decent. His parents analytical genes did come in handy for this - Deming's natural musical senses coupled with an awareness of how sound works from a scientific standpoint made music editing come quite easily to him.</p>
+
+<p>The neo-ska band died a few months before graduation, but Deming's interest in sound editing did not. Sure, if he could choose any profession to have, and somehow make money from it, it would be to keep making his weird mashups of video game music and 80s city pop (a project that he had gained a small following for on youtube, but it wasn't anything to brag about). Unfortunately, his parents really made sure he understood capitalism. He knew there was no money in his hobby. But there <i>was</i> money in sound editing.</p>
+
+<p>For the most part, Li Deming kept his own company through college. He fooled around with a handful of guys, but nothing ever amounted to anything. In one of his classes, he volunteered to edit a woman's demo tape. The woman was a fantastic singer, and with just a little bit of mixing her demo sounded almost professionally recorded. As a thank  you, she took Deming out for dinner and drinks. Which ended up with both of them hammered, laying on the floor of her dorm. In retrospect, neither of them was sure what happened first. One of them came out to the other, and then the other one came out, then there was hugging and crying and "oh my god you get me". Now, he could at least say he made one friend in college, and she was the first person he had ever met that made him feel truly <i>seen</i>.</p>
+
+<h1>03.</h1>
+<p>To the world at large, Li Deming and his best friend were dating, and had been dating for a very, very long time. They had lived together since the end of college, and whenever one of them had some social event when it would be expedient for them to bring a partner, the other was there for the ride. They have incredible chemistry, the chemistry you can only have with someone who has see every facet of yourself - the best, the worst, the ugly and the trashy. And at this point, the two of them really had seen it all.</p>
+
+<p>On the side, Li Deming had been in a fairly serious relationship with the manager of another group. Calling it codependent would perhaps be an understatement. It bordered on toxic, and it was a relationship that his best friend had been trying to convince him to leave for almost eight months. Finally though, after a string of cheating (which Deming wouldn't care that much about, except for the fact that he literally walked in on it when they were supposed to get dinner) and then some "You're a cheating jackass," and "well you're a depressed lout who will never amount to anything, and you love to wallow in your own self-righteous pity", Li Deming finally walked out, and back into the arms of his best friend for some crying and head patting. In retrospect, three months after the fact, Li Deming recognized that it really shouldn't have taken so long; That his ex was a mean-spirited pig who knew just the right things to say to send Deming into a spiral. But...damn, he had a real nice...well...you know. And he knew how to use it too. That <i>shouldn't</i> have kept Deming around, but. It certainly didn't help anything. </p>
+
+<p>Things could be a lot worse though. Sure, he was single and gay!dead (aka, over 30). But he still had his best friend, their cat, a very lucrative job with NM Entertainment, and now when he went to the club young guys were looking at him like "daddy~~". Which, to be honest, made Deming feel a bit odd. He wasn't that old, right? </p>
+
+<p>Oh, and his small, nothing-to-brag-about, youtube mashup channel? Still nothing to brag about at a sweet 15,000 subscribers.</p>
+
+
+ </div>
+ 
+   <div class="starintwo">
+ <h1>friends</h1>
+If you can get him to open up, Li Deming is quite friendly. Talk to him about 80s music and headphones, and he'll be talking for a real long time. He's a shy person though (at least, until he has a few drinks), so it can be real hard to get him to open up. He tends to be private about his personal life, and protective of his privacy. If you can crack his shell, you'll find a loyal, soft man who will drop everything to be there for you. 
+ </div>
+ 
+   <div class="starinthree">
+ <h1>enemies</h1>
+Li Deming tends to not make waves. If he has enemies, at work at least, he probably isn't aware of it. He's passively friendly to everyone he meets, but can come off as standoffish given that he doesn't like to talk much and really doesn't like to talk about himself. He's also...very possibly slept with your boyfriend. Sorry, he probably didn't know that guy that was hitting on him was taken. 
+
+ </div>
+ 
+   <div class="starinfour">
+ <h1>lovers</h1>
+Relationships? He wants to say he doesn't want another one for awhile. After getting out of a toxic and codependent relationship a few months ago, he's trying to just enjoy being a slut. To be fair, he was being a slut <i>in</i> his last relationship too (they were sort of open, it was complicated - this time around, he's going to do real ground rules for sure). Deming is a pretty switchy guy ~ his main focus is on pleasing his partner (because that pleases him), and he'll play whatever role his partner wants, and he'll play it real well. 
+ </div>
+</div><center><a href="http://cttw.jcink.net/index.php?showuser=18033" style="color:#ccc;font-size:7px;letter-spacing:5px;">MONTY</a></center>
